@@ -1,0 +1,17 @@
+body {background-color:rgb(13, 76, 127);}
+#quiz {background-color:#fff;
+	margin:0;
+	margin-top: 5%;
+    margin-right: 20%;
+   margin-left: 20%;
+   margin-bottom: 5%;
+   padding-top: 2%;
+    padding-right: 3%;
+   padding-left: 3%;
+   padding-bottom: 2%;
+   border-radius: 55px; }
+   #logo {color:blue;
+	background-image: no-repeat;
+	width: 100%;
+    text-align: center;
+	}

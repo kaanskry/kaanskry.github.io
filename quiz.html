@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<title>IT QUIZ</title>
+<head>
+	<header></header>
+	<link rel="stylesheet" type="text/css" href="css2.css">
+</head>
+
+<body>
+	<div id="logo">
+		<img src="logo.png" >
+	</div>
+<div id="quiz">
+				<p>1.___________ contains a variable that	keeps track of the number of passes through the loop. </p>
+<form>
+				<select>
+ 					 <option value="a" name="soru1" value="A">counter-controlled loops</option>
+ 					 <option value="b" name="soru1" value="B">post-test loops</option>
+ 					 <option value="c" name="soru1" value="C">pre-test loops</option>
+  					<option value="d" name="soru1" value="D">basic loops</option>
+				</select>
+
+<hr>
+				<p>2. Which definition is called a single  pass through a loop ?</p>
+   
+					<input type="radio" name="soru2" value="A">iteration<br>
+					<input type="radio" name="soru2" value="B">contiune<br>
+					<input type="radio" name="soru2" value="C">any of these<br>
+					<input type="radio" name="soru2" value="D">local<br>
+
+<hr>
+				<p>3.Which numbers values make i statement true ?<br>
+				(i>3) && (i<7)<br>
+				</p>
+
+					<input type="radio" name="soru3" value="A">5,6<br>
+					<input type="radio" name="soru3" value="B">6<br>
+					<input type="radio" name="soru3" value="C">6,7<br>
+					<input type="radio" name="soru3" value="D">4,5,6<br>
+
+<hr>
+				<p>4.What are three types of loops create using the while statement ?(Please choose three option ) </p>
+
+					<input type="checkbox" name="soru4" value="A">Result-controlled loops<br>
+					<input type="checkbox" name="soru4" value="B">Counting loops<br>
+					<input type="checkbox" name="soru4" value="C">Sentinel-controlled loops<br>
+					<input type="checkbox" name="soru4" value="D">While loops<br>
+
+<hr>
+				<p>5.How much times will write “welcome” after following code is achieve ?</br>
+					Var x=2 ; var y=1;</br>
+					{	document write(“welcome!”);</br>
+							y++;</br>
+					}</br>
+					While(y>x)</br>
+ 				</p>
+
+						<input type="radio" name="soru5" value="A">5<br>
+						<input type="radio" name="soru5" value="B">3<br>
+						<input type="radio" name="soru5" value="C">2<br>
+						<input type="radio" name="soru5" value="D">1<br>
+
+<hr>
+				<p>6.Why this loops is doesn’t running?</br>
+					For(i=1;i<4,i++){</br>
+				Var sum=0</br>
+				Sum=sum+i }</br>
+				Var average=sum/3</br>
+				Document.write(average)</br>
+				 </p>
+
+							<input type="radio" name="soru6" value="A">We will write counter<br>
+							<input type="radio" name="soru6" value="B">Sum=1<br>
+							<input type="radio" name="soru6" value="C">We must fix i<4;<br>
+							<input type="radio" name="soru6" value="D">We must fix Var average=sum/4<br>
+
+<hr>
+			<p>7. Evaluate the code and which selection is answer the loops ?</br>
+			X=2</br>
+			Y=3</br>
+			(x+y)*(12+y)/3</br>
+			 </p>
+
+					<input type="radio" name="soru7" value="A">5<br>
+					<input type="radio" name="soru7" value="B">7<br>
+					<input type="radio" name="soru7" value="C">8<br>
+					<input type="radio" name="soru7" value="D">25<br>
+
+<hr>
+		<p>8.Which variables can produce the calculate the average(please choose two option) </p>
+	
+					<input type="checkbox" name="soru8" value="A">average<br>
+					<input type="checkbox" name="soru8" value="B">summary<br>
+					<input type="checkbox" name="soru8" value="C">multiplication<br>
+					<input type="checkbox" name="soru8" value="D">global<br>
+
+<hr>
+		<p>9.What is the value of the loops <br>
+                           Var school=””;<br>
+                           mySchAdd=”123 cibali ,ist”<br>
+                           for (var x=2;x<5;x++)<br>
+                           school=school+mySchAdd.charAt(x)<br>
+ 		</p>
+
+				<input type="radio" name="soru9" value="A">cibali<br>
+				<input type="radio" name="soru9" value="B">123<br>
+				<input type="radio" name="soru9" value="C">3 c<br>
+				<input type="radio" name="soru9" value="D">not given<br>
+
+<hr>
+		<p>10. What is the value of the loop is exicet?<br>
+ 		Var count=10<br>
+		While(count<100)<br>
+        Count*=2<br> </p>
+
+			<input type="radio" name="soru10" value="A">200<br>
+			<input type="radio" name="soru10" value="B">270<br>
+			<input type="radio" name="soru10" value="C">300<br>
+			<input type="radio" name="soru10" value="D">400<br>
+<hr>
+
+		<input type="button" value="Grade" onclick="ready()">
+</form>
+<hr>
+
+		<div id="rapor"></div>
+
+
+</div>
+<script type="text/javascript">
+	function ready()
+	{
+ var soruSayisi=10;
+ var gelenCevap = new Array();
+ var dogruCevap = new Array("A","A","D","ABC","D","C","D","AB","C","B");
+ var dogru=0;
+ var yanlis=0;
+ var cevap=0;
+ var verilenCevap="";
+ var rapor="";
+	
+ for(i=1; i <= soruSayisi; i++){	
+  var secenekler=document.getElementsByName("soru"+i);
+  for(j=0; j < secenekler.length; j++){
+	if(secenekler[j].checked)
+		verilenCevap += secenekler[j].value;
+  }		
+    if(verilenCevap==dogruCevap[i-1]){
+	 cevap=1;
+	}else{
+	cevap=0;
+	}	
+	if(cevap){
+	 rapor +=i+". Your answer is: "+verilenCevap+", True <br />";
+	}else{
+	 rapor +=i+". Your anser is: "+verilenCevap+", False, True answer is: "+dogruCevap[i-1]+"<br />";
+	}
+	 gelenCevap.push(verilenCevap);	
+	 verilenCevap="";
+}
+ for(k=0; k < soruSayisi; k++){
+  if(gelenCevap[k]==dogruCevap[k]){
+   dogru++;
+  }else{
+   yanlis++;
+  }
+ }
+ rapor +="Result: "+dogru+" True, "+yanlis+" False"+"<br />";
+ document.getElementById('rapor').innerHTML=rapor;
+ }
+	</script>
+
+
+</body>
+</html>
